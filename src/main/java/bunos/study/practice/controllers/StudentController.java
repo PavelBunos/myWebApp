@@ -17,7 +17,7 @@ public class StudentController {
 
     @GetMapping
     public List<Student> findAllStudents() {
-        return service.findAllStudents(); // todo
+        return service.findAllStudents();
     }
 
     @PostMapping("/new")
