@@ -1,7 +1,7 @@
 package bunos.study.practice.controllers;
 
 import bunos.study.practice.model.Student;
-import bunos.study.practice.service.impl.InMemoryStudentService;
+import bunos.study.practice.service.StudentService;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor // Можно использовать просто @AllArgsConstructor и убрать @NonNull
 public class StudentController {
     @NonNull // Lombok замена @Autowired. Lombok сам создаёт конструктор, в котором автоматически подвязывается зависимость к сервису
-    private final InMemoryStudentService service;
+    private final StudentService service;
 
     @GetMapping
     public List<Student> findAllStudents() {
