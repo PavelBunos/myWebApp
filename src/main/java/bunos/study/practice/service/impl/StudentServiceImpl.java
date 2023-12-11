@@ -4,10 +4,12 @@ import bunos.study.practice.model.Student;
 import bunos.study.practice.repository.StudentRepository;
 import bunos.study.practice.service.StudentService;
 import lombok.AllArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Primary
 @Service
 @AllArgsConstructor
 public class StudentServiceImpl implements StudentService {
